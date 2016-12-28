@@ -32,9 +32,15 @@ public class CadastrarActivity extends AppCompatActivity implements View.OnClick
     @Override
     public void onClick(View view) {
         if (view == Cadastrar){
-
+            cadastrar();
         }else if (view == Cancelar){
             finish();
         }
+    }
+
+    private void cadastrar() {
+        Contato novo_contato;
+        novo_contato = new Contato( Nome.getText().toString(),     Endereco.getText().toString(),
+                                    Telefone.getText().toString(), Email.getText().toString()     );
     }
 }
